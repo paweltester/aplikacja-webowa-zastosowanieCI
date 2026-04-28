@@ -1,0 +1,34 @@
+name: CI - testy i linting
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ustaw Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Zainstaluj zależności
+        run: npm ci
+
+      - name: Lintowanie HTML (HTMLHint)
+        run: npx htmlhint index.html
+
+      - name: Lintowanie CSS (Stylelint)
+        run: npx stylelint "*.css"
+
+      - name: Lintowanie JavaScript (ESLint)
+        run: npx eslint "*.js"
+
+      - name: Uruchom testy jednostkowe
+        run: npm test

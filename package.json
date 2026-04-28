@@ -1,0 +1,14 @@
+{
+  "name": "tip-calculator-ci",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "eslint": "^8.56.0"
+  }
+}
