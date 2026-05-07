@@ -4,7 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #f0f2f5;
+    background: #d2f3ff;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgb(0 0 0 / 10%);
     width: 100%;
     max-width: 400px;
 }
